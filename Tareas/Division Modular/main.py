@@ -13,6 +13,7 @@ def extended_gcd(a, b):
 
 def divide(a, b, n):  #b/a mod n
   d,s,t = extended_gcd(a, n)
+  if d!=1: raise 'a and b are not relative primes'
   return (s*b)%n
   
 a, b, n = map(int, input().split());
